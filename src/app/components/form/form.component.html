@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="input">
+    <label class="">Tarea por hacer</label>
+    <input
+      class=""
+      type="text"
+      placeholder="Ingrese la tarea por hacer"
+      [(ngModel)]="newToDo.name"
+    />
+  </div>
+  <div class="input">
+    <label class="b4-inp">Cantidad de horas: {{ newToDo.time }}hs</label>
+    <input
+      type="range"
+      min="0"
+      max="24"
+      step="1"
+      name="Horas"
+      [(ngModel)]="newToDo.time"
+    />
+  </div>
+  <div class="input">
+    <label>Seleccionar la categoría</label>
+    <select name="category" [(ngModel)]="newToDo.category">
+      <option value="Electricidad">Electricidad</option>
+      <option value="Electrónica">Electrónica</option>
+      <option value="Construcción">Construcción</option>
+      <option value="Compras">Compras</option>
+      <option value="Limpieza">Limpieza</option>
+      <option value="Otros">Otros</option>
+    </select>
+  </div>
+  <div class="submit">
+    <button type="button" class="btn btn-primary" (click)="onClick()">
+      Aceptar
+    </button>
+  </div>
+</div>
